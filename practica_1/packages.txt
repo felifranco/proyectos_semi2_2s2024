@@ -5,3 +5,5 @@ python-dotenv
 
 # Base de datos
 pyodbc
+
+tabulate

@@ -1,0 +1,7 @@
+# Paquetes necesarios
+
+# Variables de entorno
+python-dotenv
+
+# Base de datos
+pyodbc

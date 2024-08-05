@@ -91,13 +91,14 @@ El menú para el manejo de la información se ve de la siguiente forma
 ┌─────────────────────────────────────────────┐
 │             --- PROCESO ETL ---             │
 │ Seleccione una de las siguientes opciones:  │
-│	 1. Borrar modelo                         │
-│	 2. Crear modelo                          │
-│	 3. Extraer información                   │
-│	 4. Cargar información                    │
-│	 5. Realizar consultas                    │
-│	                                          │
-│	 0. Salir                                 │
+│	 1. Borrar modelo                     │
+│	 2. Crear modelo                      │
+│	 3. Extraer información               │
+│	 4. Cargar información                │
+│	 5. Realizar consultas                │
+│	                                      │
+│	 0. Salir                             │
 └─────────────────────────────────────────────┘
+
 	Opción:
 ```

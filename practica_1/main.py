@@ -216,9 +216,23 @@ def realizarConsultas():
     prettyPrint("Consulta 2", query_2, result_2, ["Genero", "Porcentaje"])
 
     #CONSULTA 3
-    query_3 = "SELECT COUNT(*) as total FROM CSV"
+    query_3 = """
+    SELECT Pais, [1-2022] as '01-2022', [2-2022] as '02-2022', [3-2022] as '03-2022', [4-2022] as '04-2022', [5-2022] as '05-2022', [6-2022] as '06-2022',
+    [7-2022] as '07-2022', [8-2022] as '08-2022', [9-2022] as '09-2022', [10-2022] as '10-2022', [11-2022] as '11-2022', [12-2022] as '12-2022'
+    FROM
+    (
+    SELECT dc.country_name as Pais, CONCAT(dt.month, '-', dt.year) as mes_ano
+    FROM fact_flight ff 
+    INNER JOIN dim_country dc ON ff.id_country = dc.id_country 
+    INNER JOIN dim_time dt ON ff.id_time = dt.id_time
+    ) t
+    PIVOT
+    (
+        COUNT(mes_ano) for mes_ano in ([1-2022],[2-2022],[3-2022],[4-2022],[5-2022],[6-2022],[7-2022],[8-2022],[9-2022],[10-2022],[11-2022],[12-2022]) 
+    ) as pvt
+    """
     result_3 = db.select(query_3)
-    prettyPrint("Consulta 3", query_3, result_3, ["Total"])
+    prettyPrint("Consulta 3", query_3, result_3, ["Pais","1-2022","2-2022","3-2022","4-2022","5-2022","6-2022","7-2022","8-2022","9-2022","10-2022","11-2022","12-2022"])
 
     #CONSULTA 4
     query_4 = """

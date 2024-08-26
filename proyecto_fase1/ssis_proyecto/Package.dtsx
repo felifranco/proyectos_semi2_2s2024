@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="8/26/2024 11:55:11 AM"
@@ -11,9 +11,76 @@
   DTS:LocaleID="4106"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionGUID="{5D59B5E7-CC0C-4D81-B857-DE9C543CA683}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{8AF4D5B5-F1D7-4600-A3DA-649284F056C3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:Variables />
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4HUVH1E]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{377C71B6-74BD-4BD6-896F-1D9B1CABC206}"
+      DTS:ObjectName="DESKTOP-4HUVH1E">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-4HUVH1E;Integrated Security=True;Application Name=SSIS-Package-{377C71B6-74BD-4BD6-896F-1D9B1CABC206}DESKTOP-4HUVH1E;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B68C348F-720A-4089-9C8C-43ED0F757B62}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="delimitador">
+      <DTS:VariableValue
+        DTS:DataType="8">|</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EB46FE72-CC97-4952-9996-1D7D131FED81}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="extension_compras">
+      <DTS:VariableValue
+        DTS:DataType="8">.comp</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{020D1DE3-9EC3-4D48-ABC2-829441D4B4C2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="folder_error">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\Félix\Documents\Repos\GitHub\proyectos_semi2_2s2024\proyecto_fase1\errores</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DEED1BFC-E9FA-4088-90F0-740F07B0F08E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="folder_origen">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\Users\Félix\Documents\Repos\GitHub\proyectos_semi2_2s2024\proyecto_fase1\ArchivosEntradaSG</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1882E39E-91C8-4883-8C1B-1B755A2D117E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="tabla_detino">
+      <DTS:VariableValue
+        DTS:DataType="8">sgfood01_comp</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
   <DTS:Executables />
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="mariadb_ds.root"
+  DTS:DTSID="{C3A6A066-D104-4630-99C4-5C0058736B6B}"
+  DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=root;Dsn=mariadb_ds;Driver={MariaDB ODBC 3.2 Driver};tcpip=1;port=3307;sslverify=1;nulliscurrent=1;pscachesize=250;maxcachekey=2112;pcallback=1;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAACAAAAAAAQZgAAAAEAACAAAAAe7V8hQCLkFK5+L4Fvq/5refCtvgEZEYF2zcdpmIdkQgAAAAAOgAAAAAIAACAAAAAtwdfjYZJxcVkDghkjDnX1gEGwbhs202kzwIz+hV+sVYAAAAA+Dfr17s3AZ7tkWeOaNYkCpsu5IcrKz/E5qp+aFy87bpORmJVwxEf5/CgYzx1gco6jY5gGx/HHUPu61C70JP+hCjvQrpRsbZcHGhSsS3Dyo0UgmGSEzXDA1nr4FrMmv7iPC9IFejOkwRdxUFmF2XUnVHGm2J/HpUKPfgIUmnSYJ0AAAADCcLoT9NWedtkp7PRGmyhKWpQJW9vnZqKz8XoZbkkm/C7stteUk/xKFPe30x/F072RLFTPBD40MPgpE78Ff25R</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

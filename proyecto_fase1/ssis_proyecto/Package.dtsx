@@ -11,8 +11,8 @@
   DTS:LocaleID="4106"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="89"
-  DTS:VersionGUID="{CBB425CF-E790-46B6-9EF9-25481C1F0DCA}">
+  DTS:VersionBuild="95"
+  DTS:VersionGUID="{2C30AAA2-E510-4591-A398-792243C63D03}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -400,7 +400,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADNnouiH3SQYmUTkgE7L7syZ4VWbsu9zIw2tw6nMctbeAAAAAAOgAAAAAIAACAAAAApopbEc5/GXqMJJxJZRg6L6UU1pLHV54/BUsxORtMZTDAAAAD0MGaKwrL8XobyGZVwwq+eF2EuzsAAk9rHDZPhwX5Lnfs3ouD0yDNl1pSzJzCdsydAAAAAWfMX/Vg9113RQCsJLtn9n72JpM/pBMVL0GVy7OwsJKVWSiPXgcVkxL7oCWoIGZ4lYCHydmZzTj0R101ebAfeUg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAWiS1gKurj7hlpZ9Trltxt3HRwgD0P0VljrhbLorwLpAAAAAAOgAAAAAIAACAAAADBdZ/pnerquLbUBa8jLjPaa+WBxbSBhiz0RmLZ5H0c+TAAAABB6XOn8DhLSM3FogQHOPLt1DJoDKWn2GQh6Ph7i7g5b7clvLq4xbLkghrjn5I5wetAAAAAEFT/e/c/i8Pj9kFzsyml7QWosIhQQgix7pfZhgEY/wjzIBQBAITRtOf2AJbHOi0dLySirB7tphSAysIEOQqnXQ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -415,7 +415,7 @@
           <DTS:Password
             DTS:Name="password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADFa3t1xzm8a1HM0Hz4Bca9NfIjn5WL9upeBl3TYeV1TAAAAAAOgAAAAAIAACAAAAACdzcbOY6BbmN6HeEEIcCRBFauEflqhLd7I/Vq0PXsQTAAAACOx2nicV3e3QI3MxQHZHwUDgB9tuxvk365RGLUDUvHJBqU73LRQQo3h+WmQLmOaCVAAAAA4LWBcS8d9ulJDywXhQ6xTE/LJRoRT8vTtj3cFCCbQJDgsLfIR7rE3y4tvCiCbvSb83RE+Cvo7tI1GdLwrMqlBg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACQbWytf0Oo7Fhg1wCce+YkuN3YnD3pcTfjP/4lxiJdfgAAAAAOgAAAAAIAACAAAADyy1XKJ8xW9A2+EHgQECDZEF3JScm5PzZloMbex3d2XDAAAAD8j7QK00JXVBWU6Eq68SC2RkOccioylKiRF0N2U3dct9bsu0pE1Qs3WzfiTsywgDJAAAAAQH+Ozla+lG5hwj6bcmHFQcBr8ZAr7gjEG9pYMo8LEtsVV/A0HDAuQFSkF2LN+8tZG9OPRCAVJoo00tp5rLSBpg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3848,9 +3848,23 @@
                 </output>
                 <output
                   refId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 2]"
-                  dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Salida de multidifusión 2"
+                  synchronousInputId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 3]"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 3"
+                  synchronousInputId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 4]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 4"
                   synchronousInputId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Inputs[Entrada de Multidifusión 1]">
                   <externalMetadataColumns />
                 </output>
@@ -4166,6 +4180,20 @@
                           name="OutputColumnLineageID">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Departamento_transformed]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Inputs[Entrada de Unión de todo 2].Columns[SodSuSursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SodSuSursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[SodSuSursal_transformed]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Id. de linaje de columna de salida"
+                          name="OutputColumnLineageID">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[SodSuSucursal_transformed]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4415,6 +4443,142 @@
               </outputs>
             </component>
             <component
+              refId="Package\Cargar datos en dimensiones\Insert dim_producto"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Insert dim_producto"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."dim_producto"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos en dimensiones\Insert dim_producto.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL_SERVER.data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL_SERVER.data_warehouse]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].Columns[CodProducto_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodProducto_sort"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[codigo_producto]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[CodProducto_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].Columns[NombreProducto_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreProducto_sort"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_producto]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[NombreProducto_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].Columns[MarcaProducto_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MarcaProducto_sort"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[marca_producto]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[MarcaProducto_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].Columns[Categoria_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Categoria_sort"
+                      cachedSortKeyPosition="4"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[categoria]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Categoria_sort]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_producto]"
+                      dataType="i4"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[codigo_producto]"
+                      dataType="wstr"
+                      length="100"
+                      name="codigo_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_producto]"
+                      dataType="wstr"
+                      length="100"
+                      name="nombre_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[marca_producto]"
+                      dataType="wstr"
+                      length="100"
+                      name="marca_producto" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET].ExternalColumns[categoria]"
+                      dataType="wstr"
+                      length="100"
+                      name="categoria" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Insert dim_producto.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos en dimensiones\Insert dim_producto.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_producto.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos en dimensiones\Insert dim_producto.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Cargar datos en dimensiones\Insert dim_region"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
@@ -4504,6 +4668,128 @@
                       refId="Package\Cargar datos en dimensiones\Insert dim_region.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Cargar datos en dimensiones\Insert dim_region.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos en dimensiones\Insert dim_sucursal"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Insert dim_sucursal"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."dim_sucursal"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL_SERVER.data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL_SERVER.data_warehouse]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].Columns[SodSuSucursal_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SodSuSucursal_sort"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[sod_su_sucursal]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[SodSuSucursal_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].Columns[NombreSucursal_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreSucursal_sort"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_sucursal]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[NombreSucursal_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].Columns[DireccionSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionSucursal_transformed"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[direccion_sucursal]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_sucursal]"
+                      dataType="i4"
+                      name="id_sucursal" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[sod_su_sucursal]"
+                      dataType="wstr"
+                      length="50"
+                      name="sod_su_sucursal" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_sucursal]"
+                      dataType="wstr"
+                      length="100"
+                      name="nombre_sucursal" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET].ExternalColumns[direccion_sucursal]"
+                      dataType="wstr"
+                      length="200"
+                      name="direccion_sucursal" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -7595,6 +7881,327 @@
               </outputs>
             </component>
             <component
+              refId="Package\Cargar datos en dimensiones\Ordenar productos"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar productos"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[CodProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[CodProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[NombreProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[MarcaProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MarcaProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[MarcaProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[Categoria_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Categoria_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Categoria_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[SodSuSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SodSuSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[SodSuSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[NombreSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[DireccionSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[DireccionSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[Region_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Region_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Region_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación].Columns[Departamento_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Departamento_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Departamento_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[CodProducto_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[CodProducto_sort]"
+                      name="CodProducto_sort"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[CodProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[NombreProducto_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[NombreProducto_sort]"
+                      name="NombreProducto_sort"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[MarcaProducto_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[MarcaProducto_sort]"
+                      name="MarcaProducto_sort"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[MarcaProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Categoria_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Categoria_sort]"
+                      name="Categoria_sort"
+                      sortKeyPosition="4">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Categoria_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[SodSuSucursal_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[SodSuSucursal_transformed]"
+                      name="SodSuSucursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[SodSuSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[NombreSucursal_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[NombreSucursal_transformed]"
+                      name="NombreSucursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]"
+                      name="DireccionSucursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[DireccionSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Region_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Region_transformed]"
+                      name="Region_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Region_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
+                      name="Departamento_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Departamento_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Cargar datos en dimensiones\Ordenar proveedores"
               componentClassID="Microsoft.Sort"
               contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
@@ -8623,6 +9230,325 @@
                       dataType="wstr"
                       length="100"
                       lineageId="Package\Cargar datos en dimensiones\Ordenar regiones.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
+                      name="Departamento_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Departamento_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos en dimensiones\Ordenar sucursales"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar sucursales"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[CodProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[CodProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[NombreProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[MarcaProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MarcaProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[MarcaProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[Categoria_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Categoria_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Categoria_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[SodSuSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SodSuSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[SodSuSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[NombreSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[DireccionSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[DireccionSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[Region_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Region_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Region_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación].Columns[Departamento_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Departamento_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Departamento_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[CodProducto_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[CodProducto_transformed]"
+                      name="CodProducto_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[CodProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[NombreProducto_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[NombreProducto_transformed]"
+                      name="NombreProducto_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[MarcaProducto_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[MarcaProducto_transformed]"
+                      name="MarcaProducto_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[MarcaProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[Categoria_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[Categoria_transformed]"
+                      name="Categoria_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Categoria_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[SodSuSucursal_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[SodSuSucursal_sort]"
+                      name="SodSuSucursal_sort"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[SodSuSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[NombreSucursal_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[NombreSucursal_sort]"
+                      name="NombreSucursal_sort"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[NombreSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]"
+                      name="DireccionSucursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[DireccionSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[Region_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[Region_transformed]"
+                      name="Region_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1].Columns[Region_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
                       name="Departamento_transformed">
                       <properties>
                         <property
@@ -11819,15 +12745,10 @@
               name="Salida de conversión de datos"
               startId="Package\Cargar datos en dimensiones\Conversión de datos.Outputs[Salida de conversión de datos]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 12]"
-              endId="Package\Cargar datos en dimensiones\Ordenar regiones.Inputs[Entrada de ordenación]"
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 1]"
+              endId="Package\Cargar datos en dimensiones\Extraer fechas.Inputs[Entrada de Unión de todo 2]"
               name="Salida de multidifusión 1"
-              startId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 1]" />
-            <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de Multidifusión 11]"
-              endId="Package\Cargar datos en dimensiones\Ordenar departamentos.Inputs[Entrada de ordenación]"
-              name="Salida de Multidifusión 1"
-              startId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de Multidifusión 1]" />
+              startId="Package\Cargar datos en dimensiones\Distribuir datos compras.Outputs[Salida de multidifusión 1]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 11]"
               endId="Package\Cargar datos en dimensiones\Ordenar clientes.Inputs[Entrada de ordenación]"
@@ -11839,10 +12760,20 @@
               name="Salida de Multidifusión 1"
               startId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Outputs[Salida de Multidifusión 1]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 1]"
-              endId="Package\Cargar datos en dimensiones\Extraer fechas.Inputs[Entrada de Unión de todo 2]"
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de Multidifusión 11]"
+              endId="Package\Cargar datos en dimensiones\Ordenar departamentos.Inputs[Entrada de ordenación]"
+              name="Salida de Multidifusión 1"
+              startId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de Multidifusión 1]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 12]"
+              endId="Package\Cargar datos en dimensiones\Ordenar regiones.Inputs[Entrada de ordenación]"
               name="Salida de multidifusión 1"
-              startId="Package\Cargar datos en dimensiones\Distribuir datos compras.Outputs[Salida de multidifusión 1]" />
+              startId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 1]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 21]"
+              endId="Package\Cargar datos en dimensiones\Ordenar productos.Inputs[Entrada de ordenación]"
+              name="Salida de multidifusión 2"
+              startId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 2]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 2]"
               endId="Package\Cargar datos en dimensiones\Ordenar proveedores.Inputs[Entrada de ordenación]"
@@ -11859,10 +12790,20 @@
               name="Salida de multidifusión 3"
               startId="Package\Cargar datos en dimensiones\Distribuir datos compras.Outputs[Salida de multidifusión 3]" />
             <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 32]"
+              endId="Package\Cargar datos en dimensiones\Ordenar sucursales.Inputs[Entrada de ordenación]"
+              name="Salida de multidifusión 3"
+              startId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Outputs[Salida de multidifusión 3]" />
+            <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 4]"
               endId="Package\Cargar datos en dimensiones\Convertir campo vacacionista.Inputs[Entrada de conversión de datos]"
               name="Salida de multidifusión 4"
               startId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Outputs[Salida de multidifusión 4]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación3]"
+              endId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de ordenación"
+              startId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación2]"
               endId="Package\Cargar datos en dimensiones\Insertar dim_cliente.Inputs[Entrada de destino de ADO NET]"
@@ -11874,35 +12815,30 @@
               name="Salida de ordenación"
               startId="Package\Cargar datos en dimensiones\Ordenar proveedores.Outputs[Salida de ordenación]" />
             <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación]"
+              endId="Package\Cargar datos en dimensiones\Campos ano, mes, dia.Inputs[Entrada de columna derivada]"
+              name="Salida de ordenación"
+              startId="Package\Cargar datos en dimensiones\Ordenar fechas y eliminar repetidas.Outputs[Salida de ordenación]" />
+            <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación5]"
               endId="Package\Cargar datos en dimensiones\Insert dim_region.Inputs[Entrada de destino de ADO NET]"
               name="Salida de ordenación"
               startId="Package\Cargar datos en dimensiones\Ordenar regiones.Outputs[Salida de ordenación]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación6]"
+              endId="Package\Cargar datos en dimensiones\Insert dim_producto.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de ordenación"
+              startId="Package\Cargar datos en dimensiones\Ordenar productos.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación4]"
               endId="Package\Cargar datos en dimensiones\Insert dim_departamento.Inputs[Entrada de destino de ADO NET]"
               name="Salida de ordenación"
               startId="Package\Cargar datos en dimensiones\Ordenar departamentos.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación]"
-              endId="Package\Cargar datos en dimensiones\Campos ano, mes, dia.Inputs[Entrada de columna derivada]"
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación7]"
+              endId="Package\Cargar datos en dimensiones\Insert dim_sucursal.Inputs[Entrada de destino de ADO NET]"
               name="Salida de ordenación"
-              startId="Package\Cargar datos en dimensiones\Ordenar fechas y eliminar repetidas.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación3]"
-              endId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de ordenación"
-              startId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación]" />
-            <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de ADO NET1]"
-              endId="Package\Cargar datos en dimensiones\Datos de compras.Inputs[Entrada de Unión de todo 2]"
-              name="Salida de origen de ADO NET"
-              startId="Package\Cargar datos en dimensiones\MariaDB - sgfood02 - compra.Outputs[Salida de origen de ADO NET]" />
-            <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de ADO NET2]"
-              endId="Package\Cargar datos en dimensiones\Datos de ventas.Inputs[Entrada de Unión de todo 1]"
-              name="Salida de origen de ADO NET"
-              startId="Package\Cargar datos en dimensiones\SQL_SERVER - sgfood01 - venta.Outputs[Salida de origen de ADO NET]" />
+              startId="Package\Cargar datos en dimensiones\Ordenar sucursales.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de ADO NET]"
               endId="Package\Cargar datos en dimensiones\Datos de compras.Inputs[Entrada de Unión de todo 1]"
@@ -11914,25 +12850,25 @@
               name="Salida de origen de ADO NET"
               startId="Package\Cargar datos en dimensiones\MariaDB -sgfood02 - venta.Outputs[Salida de origen de ADO NET]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de archivo plano]"
-              endId="Package\Cargar datos en dimensiones\Datos de compras.Inputs[Entrada de Unión de todo 3]"
-              name="Salida de origen de archivo plano"
-              startId="Package\Cargar datos en dimensiones\Archivo - sgfood03 - compra.Outputs[Salida de origen de archivo plano]" />
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de ADO NET2]"
+              endId="Package\Cargar datos en dimensiones\Datos de ventas.Inputs[Entrada de Unión de todo 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Cargar datos en dimensiones\SQL_SERVER - sgfood01 - venta.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de ADO NET1]"
+              endId="Package\Cargar datos en dimensiones\Datos de compras.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Cargar datos en dimensiones\MariaDB - sgfood02 - compra.Outputs[Salida de origen de ADO NET]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de archivo plano1]"
               endId="Package\Cargar datos en dimensiones\Datos de ventas.Inputs[Entrada de Unión de todo 3]"
               name="Salida de origen de archivo plano"
               startId="Package\Cargar datos en dimensiones\Archivo - sgfood03 - venta.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 13]"
-              endId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Inputs[Entrada de Multidifusión 1]"
-              name="Salida de Unión de todo 1"
-              startId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1]" />
-            <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 12]"
-              endId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Inputs[Entrada de columna derivada]"
-              name="Salida de Unión de todo 1"
-              startId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1]" />
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de origen de archivo plano]"
+              endId="Package\Cargar datos en dimensiones\Datos de compras.Inputs[Entrada de Unión de todo 3]"
+              name="Salida de origen de archivo plano"
+              startId="Package\Cargar datos en dimensiones\Archivo - sgfood03 - compra.Outputs[Salida de origen de archivo plano]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 11]"
               endId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios compras.Inputs[Entrada de columna derivada]"
@@ -11943,6 +12879,16 @@
               endId="Package\Cargar datos en dimensiones\Conversión de datos.Inputs[Entrada de conversión de datos]"
               name="Salida de Unión de todo 1"
               startId="Package\Cargar datos en dimensiones\Extraer fechas.Outputs[Salida de Unión de todo 1]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 13]"
+              endId="Package\Cargar datos en dimensiones\Distribuir datos sucursal, producto, region y departamento.Inputs[Entrada de Multidifusión 1]"
+              name="Salida de Unión de todo 1"
+              startId="Package\Cargar datos en dimensiones\Extraer datos sucursal, producto, region y departamento.Outputs[Salida de Unión de todo 1]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 12]"
+              endId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Inputs[Entrada de columna derivada]"
+              name="Salida de Unión de todo 1"
+              startId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -14004,7 +14950,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{0765E8FD-8994-4001-8965-3BED233702C4}"
-          SQLTask:SqlStatementSource="DELETE FROM dim_cliente;&#xA;DELETE FROM dim_departamento;&#xA;DELETE FROM dim_producto;&#xA;DELETE FROM dim_proveedor;&#xA;DELETE FROM dim_region;&#xA;DELETE FROM dim_sucursal;&#xA;DELETE FROM dim_tiempo;&#xA;DELETE FROM dim_vendedor;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="DELETE FROM hechos_compra;&#xA;DELETE FROM hechos_venta;&#xA;DELETE FROM dim_cliente;&#xA;DELETE FROM dim_departamento;&#xA;DELETE FROM dim_producto;&#xA;DELETE FROM dim_proveedor;&#xA;DELETE FROM dim_region;&#xA;DELETE FROM dim_sucursal;&#xA;DELETE FROM dim_tiempo;&#xA;DELETE FROM dim_vendedor;&#xA;DBCC CHECKIDENT ('[dim_cliente]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_departamento]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_producto]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_proveedor]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_region]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_sucursal]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_tiempo]', RESEED, 0);&#xA;DBCC CHECKIDENT ('[dim_vendedor]', RESEED, 0);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -14073,7 +15019,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="215.2,41.6"
           Id="Package\Cargar datos en dimensiones"
-          TopLeft="245.1190517934,529.558830956275" />
+          TopLeft="246.071432762,529.558830956275" />
         <NodeLayout
           Size="228.8,41.6"
           Id="Package\Cargar sgfood01 - SQL_SERVER"
@@ -14185,10 +15131,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         <NodeLayout
           Size="188.8,41.6"
           Id="Package\Vaciar Data Warehouse"
-          TopLeft="259.285718701324,447.352947450427" />
+          TopLeft="260.714290154224,447.352947450427" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 4]"
-          TopLeft="351.695242405425,407.894122784196">
+          TopLeft="352.409528131874,407.894122784196">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -14210,7 +15156,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción 5]"
-          TopLeft="353.202385247362,488.952947450427">
+          TopLeft="354.392861458112,488.952947450427">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -14237,7 +15183,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
     design-time-name="Package\Cargar datos en dimensiones">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="128" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="163.2,41.6"
           Id="Package\Cargar datos en dimensiones\Datos de compras"
@@ -15198,6 +16144,134 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\Cargar datos en dimensiones\Ordenar productos"
+          TopLeft="1496.20410285052,885.630259071903" />
+        <EdgeLayout
+          Id="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 21]"
+          TopLeft="1072.36301070437,984.128966501586">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="507.04109214615,-56.8987074296834"
+              Start="0,0"
+              End="507.04109214615,-49.3987074296834">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.2501614956713" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.2501614956713"
+                    Point2="0,-19.2501614956713"
+                    Point3="4,-19.2501614956713" />
+                  <mssgle:LineSegment
+                    End="503.04109214615,-19.2501614956713" />
+                  <mssgle:CubicBezierSegment
+                    Point1="503.04109214615,-19.2501614956713"
+                    Point2="507.04109214615,-19.2501614956713"
+                    Point3="507.04109214615,-23.2501614956713" />
+                  <mssgle:LineSegment
+                    End="507.04109214615,-49.3987074296834" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Cargar datos en dimensiones\Insert dim_producto"
+          TopLeft="1490.08165376666,782.941182001475" />
+        <EdgeLayout
+          Id="Package\Cargar datos en dimensiones.Paths[Salida de ordenación6]"
+          TopLeft="1578.34287830859,885.630259071903">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-61.0890770704276"
+              Start="0,0"
+              End="0,-53.5890770704276">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-53.5890770704276" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="168.8,41.6"
+          Id="Package\Cargar datos en dimensiones\Ordenar sucursales"
+          TopLeft="1253.34695585754,1075.7142953512" />
+        <EdgeLayout
+          Id="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 32]"
+          TopLeft="1043.56301070437,1025.72896650159">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="294.183945153174,49.9853288496188"
+              Start="0,0"
+              End="294.183945153174,42.4853288496188">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.1292270232248" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.1292270232248"
+                    Point2="0,20.1292270232248"
+                    Point3="4,20.1292270232248" />
+                  <mssgle:LineSegment
+                    End="290.183945153174,20.1292270232248" />
+                  <mssgle:CubicBezierSegment
+                    Point1="290.183945153174,20.1292270232248"
+                    Point2="294.183945153174,20.1292270232248"
+                    Point3="294.183945153174,24.1292270232248" />
+                  <mssgle:LineSegment
+                    End="294.183945153174,42.4853288496188" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Cargar datos en dimensiones\Insert dim_sucursal"
+          TopLeft="1253.66092760543,1158.99160744351" />
+        <EdgeLayout
+          Id="Package\Cargar datos en dimensiones.Paths[Salida de ordenación7]"
+          TopLeft="1339.70394173149,1117.3142953512">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.6773120923028"
+              Start="0,0"
+              End="0,34.1773120923028">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.1773120923028" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -15275,6 +16349,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Cargar datos en dimensiones\Insert dim_region">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar datos en dimensiones\Insert dim_producto">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar datos en dimensiones\Insert dim_sucursal">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

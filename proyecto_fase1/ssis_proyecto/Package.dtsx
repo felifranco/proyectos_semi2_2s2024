@@ -11,8 +11,8 @@
   DTS:LocaleID="4106"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="106"
-  DTS:VersionGUID="{D1FE84F3-9ACF-4280-BCEC-68FA0E3C9AAB}">
+  DTS:VersionBuild="109"
+  DTS:VersionGUID="{1A68BE36-C416-4FE3-9330-A0604ABCACF1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -400,7 +400,7 @@
           <DTS:Password
             DTS:Name="password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB8zOFPH25FAvsEPqWD++zRbnfCD5jDsvXsHbMZUWr7GQAAAAAOgAAAAAIAACAAAACni6mzjsgjApbFfTTZz5kwJ99eE91o1KVIoGh1DsOwKzAAAACxjTfb065eTuYBEcEuG7pJQcGctq9CBtHGIb1Hm1enewnP6hUAZT80emV9k25LLIxAAAAAOvbvKJ4FTW7gVZSE7Kasz4SgLIEPLPgseZTvxp6yTF5EZipLHzniBxQ9zuIiOOSjIQDmRu4cak+A66O8PKWiNw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD4hv6X39PuwyVWrK8eShMJw0MgiQpU6oYh5wytz6ZIHwAAAAAOgAAAAAIAACAAAAA8lQUPvlShCZkAZpZZt0j1aWBncbG30MGBndoh7WPuXTAAAAALnwhmOY0YQxOGLmY6sLRHjBWO5nm/Y8wrbOXmk7/kmwVgctsob4EQYS049UaukMBAAAAAJzjeOyq9DaWFcMseehJwrqsbhhIUfumOxMj+9KzMcUpuHyB0hjAIey5Rx27ZlqMQtD7pHp1q1vC1kRSDCF3VQA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -421,7 +421,7 @@
       DTS:ObjectName="SQL_SERVER.data_warehouse">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-4HUVH1E;Initial Catalog=data_warehouse;Integrated Security=True;Application Name=SSIS-Package-{0765E8FD-8994-4001-8965-3BED233702C4}DESKTOP-4HUVH1E.data_warehouse;" />
+          DTS:ConnectionString="Data Source=DESKTOP-4HUVH1E;Initial Catalog=seminario2_200915532;Integrated Security=True;Application Name=SSIS-Package-{0765E8FD-8994-4001-8965-3BED233702C4}DESKTOP-4HUVH1E.data_warehouse;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -436,6 +436,26 @@
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{71CA2906-78AB-4ED5-B599-A937AB34DBE3}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="count_cliente">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1448C321-5E53-4C07-8D52-FA5C0BE17B8A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="count_departamento">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
       DTS:DTSID="{B68C348F-720A-4089-9C8C-43ED0F757B62}"
@@ -47241,6 +47261,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Tarea Ejecutar SQL"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{6CAEC6B5-5176-49B7-931A-00590CB907CD}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Ejecutar SQL"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{0765E8FD-8994-4001-8965-3BED233702C4}"
+          SQLTask:SqlStatementSource="SELECT COUNT('x') as Registros FROM dim_cliente;&#xA;SELECT COUNT('x') as Registros FROM dim_departamento;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::count_cliente"
+            SQLTask:ParameterDirection="Output"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Vaciar Data Warehouse"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
@@ -47323,6 +47367,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Restricción 7"
       DTS:To="Package\Cargar datos en hechos venta" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Restricción 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{62D80D16-C4EE-453E-A787-34F88C71D8CE}"
+      DTS:From="Package\Cargar datos en hechos venta"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Restricción 8"
+      DTS:To="Package\Tarea Ejecutar SQL" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
@@ -47552,6 +47604,32 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
                     Point3="-8.07346945031338,18.3917392554582" />
                   <mssgle:LineSegment
                     End="-8.07346945031338,21.2834785109163" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Tarea Ejecutar SQL"
+          TopLeft="270.219784821596,756.248876743441" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Restricción 8]"
+          TopLeft="353.381323044061,717.600009480645">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.6488672627961"
+              Start="0,0"
+              End="0,31.1488672627961">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.1488672627961" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

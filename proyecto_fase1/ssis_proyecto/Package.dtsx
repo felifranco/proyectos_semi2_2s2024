@@ -11,8 +11,8 @@
   DTS:LocaleID="4106"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="84"
-  DTS:VersionGUID="{C389E9F5-E0E6-4AA5-86F0-0D398E24B928}">
+  DTS:VersionBuild="85"
+  DTS:VersionGUID="{D2CDB5C0-F407-41A1-AFD2-554483474DCB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -400,7 +400,7 @@
           <DTS:Password
             DTS:Name="pwd"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA6Z4+JxcX2hWiwtKqK0VpQind0xUmIk24sQmNaYTPYsgAAAAAOgAAAAAIAACAAAACthLwuh6NgRLhWulLPMd/qqzmyVtkiDfu3EdBvciPu4TAAAADP2CFBwDe2he///aPP33vb/tvP4fCRkFZNDRJIe41Jizkx5kmbCyo6EBAJ5Bxpg25AAAAAW/TB3hK4C88lq8+zYpT/nBl0+UJxEWguzWesmtZuGmsglGsVQ/h8LzmqDxu/vNehBWVKQMp3IdfSoKaqDWvb2g</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACohCCqujwcWL05YMWsKKJDnRLdBE4x4owz+DsaluFbqAAAAAAOgAAAAAIAACAAAACjvzfbUon0NWNS8ueOCpQMWbLqPQcXUbQHK4OJujxcWTAAAABlS8ZOBDsiKN2NVMfKbdUSl/AaQMT3bKXg+7/UoxuXWzWor+VDLee+D4XESPwQ4jRAAAAAw1+HHauGuXMLqWmF6YKC5c23lqnOn1xapGlY311sXmR0u40StGXlfOidF0FRlzkcd9HcTI/IngIt+E5pB7UUOA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -415,7 +415,7 @@
           <DTS:Password
             DTS:Name="password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABEphHwWTHEKnAK1KAA69FFNkXwRAUEOf8gjMm2iXPfEwAAAAAOgAAAAAIAACAAAADOJfSWtyZ8j4aOM/33xONHfekOaXHUdeVKhbfJc+4VUzAAAADpOQBeU+nVZ67Eq+1+w38CSPXxJIktKqslXYdPb1qZcLWyZxCu9dx6GdSUU/F77HVAAAAA/bfRBrvJVK6yelGRSQxvh9z3hUclgUPJOC4l89vH5R6vCGe3JQt33luHRcPMYeF/2tXcOmWo44Upi0bC5yBleg</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGxCHGpIHYEiFKiBUw4+lTAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABOF4OYkCaXt5tXyTpD5gqJAK7ejbdFtlXuZ8npH9SglwAAAAAOgAAAAAIAACAAAAB0s0WgskpCMtR02VFDmhyU3WRevL+VYnECKx39h8AiCjAAAABvDQNjhyCZ0gxnjSG0avIEbOXQI6IXB81049fwlJAgjlitpg/YgaJ/onyWW4JA8HRAAAAALuYbTKV1Y1uNazp32Dyn0MkGN5F9kI7J7U8Drn236bDqWsp9DdM1xwuD0jyVvcKm8aHMSK3ot2VMgGskago0oA</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3765,9 +3765,16 @@
                 </output>
                 <output
                   refId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Outputs[Salida de multidifusión 2]"
-                  dangling="true"
                   deleteOutputOnPathDetached="true"
                   name="Salida de multidifusión 2"
+                  synchronousInputId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Inputs[Entrada de Multidifusión 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Outputs[Salida de multidifusión 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Salida de multidifusión 3"
                   synchronousInputId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Inputs[Entrada de Multidifusión 1]">
                   <externalMetadataColumns />
                 </output>
@@ -3844,6 +3851,128 @@
                       length="100"
                       lineageId="Package\Cargar datos en dimensiones\Extraer fechas.Outputs[Salida de Unión de todo 1].Columns[Fecha]"
                       name="Fecha" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar datos en dimensiones\Insert dim_vendedor"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Insert dim_vendedor"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."dim_vendedor"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQL_SERVER.data_warehouse]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQL_SERVER.data_warehouse]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].Columns[CodVendedor_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodVendedor_sort"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[codigo_vendedor]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodVendedor_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].Columns[NombreVendedor_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreVendedor_sort"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_vendedor]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreVendedor_sort]" />
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].Columns[Vacacionista_sort]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Vacacionista_sort"
+                      cachedSortKeyPosition="3"
+                      externalMetadataColumnId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[vacacionista]"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Vacacionista_sort]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[id_vendedor]"
+                      dataType="i4"
+                      name="id_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[codigo_vendedor]"
+                      dataType="wstr"
+                      length="100"
+                      name="codigo_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[nombre_vendedor]"
+                      dataType="wstr"
+                      length="100"
+                      name="nombre_vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET].ExternalColumns[vacacionista]"
+                      dataType="bool"
+                      name="vacacionista" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -7220,6 +7349,1194 @@
               </outputs>
             </component>
             <component
+              refId="Package\Cargar datos en dimensiones\Ordenar vendedores"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordenar;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;1"
+              description="Ordena los datos de entrada de manera ascendente o descendente cuando no es posible ordenarlos en su origen. Por ejemplo, se ordenan los datos de ventas por 'id. de cliente' antes de que se escriban en un archivo plano y se entreguen a otro departamento. Nota: no se recomienda realizar esta transformación para grandes flujos de datos."
+              name="Ordenar vendedores"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si la transformación Ordenar quita filas con valores de ordenación duplicados."
+                  name="EliminateDuplicates">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el número máximo de subprocesos que se deben usar para la ordenación."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación]"
+                  name="Entrada de ordenación">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Fecha]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Fecha"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Fecha]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[CodigoCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodigoCliente"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[CodigoCliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreCliente"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreCliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[TipoCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="TipoCliente"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[TipoCliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[DireccionCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionCliente"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[DireccionCliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NumeroCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NumeroCliente"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NumeroCliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[CodVendedor]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodVendedor"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[CodVendedor]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreVendedor]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreVendedor"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreVendedor]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Vacacionista]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Vacacionista"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Vacacionista]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[CodProducto]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodProducto"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[CodProducto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreProducto]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreProducto"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreProducto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[MarcaProducto]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MarcaProducto"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[MarcaProducto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Categoria]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Categoria"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Categoria]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[SodSuSursal]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SodSuSursal"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[SodSuSursal]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreSucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreSucursal"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreSucursal]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[DireccionSucursal]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionSucursal"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[DireccionSucursal]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Region"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Departamento]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Departamento"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Departamento]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Unidades]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Unidades"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Unidades]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[PrecioUnitario]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="PrecioUnitario"
+                      lineageId="Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[PrecioUnitario]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[CodigoCliente_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodigoCliente_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[CodigoCliente_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreCliente_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreCliente_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreCliente_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[TipoCliente_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="TipoCliente_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[TipoCliente_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[DireccionCliente_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionCliente_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[DireccionCliente_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NumeroCliente_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NumeroCliente_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NumeroCliente_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[CodVendedor_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodVendedor_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[CodVendedor_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreVendedor_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreVendedor_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreVendedor_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Vacacionista_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Vacacionista_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Vacacionista_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[CodProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="CodProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[CodProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[MarcaProducto_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="MarcaProducto_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[MarcaProducto_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Categoria_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Categoria_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Categoria_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[SodSuSursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="SodSuSursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[SodSuSursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[NombreSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="NombreSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[DireccionSucursal_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="DireccionSucursal_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[DireccionSucursal_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Region_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Region_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Region_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación].Columns[Departamento_transformed]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Departamento_transformed"
+                      lineageId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Departamento_transformed]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica las opciones de comparación para datos de caracteres."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Especifica el criterio de ordenación de la columna."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación]"
+                  isSorted="true"
+                  name="Salida de ordenación">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Fecha]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Fecha]"
+                      name="Fecha">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Fecha]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodigoCliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodigoCliente]"
+                      name="CodigoCliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[CodigoCliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreCliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreCliente]"
+                      name="NombreCliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreCliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[TipoCliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[TipoCliente]"
+                      name="TipoCliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[TipoCliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionCliente]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionCliente]"
+                      name="DireccionCliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[DireccionCliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NumeroCliente]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NumeroCliente]"
+                      name="NumeroCliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NumeroCliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodVendedor]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodVendedor]"
+                      name="CodVendedor">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[CodVendedor]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreVendedor]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreVendedor]"
+                      name="NombreVendedor">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreVendedor]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Vacacionista]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Vacacionista]"
+                      name="Vacacionista">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Vacacionista]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodProducto]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodProducto]"
+                      name="CodProducto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[CodProducto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreProducto]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreProducto]"
+                      name="NombreProducto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreProducto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[MarcaProducto]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[MarcaProducto]"
+                      name="MarcaProducto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[MarcaProducto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Categoria]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Categoria]"
+                      name="Categoria">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Categoria]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[SodSuSursal]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[SodSuSursal]"
+                      name="SodSuSursal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[SodSuSursal]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreSucursal]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreSucursal]"
+                      name="NombreSucursal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[NombreSucursal]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionSucursal]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionSucursal]"
+                      name="DireccionSucursal">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[DireccionSucursal]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Region]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Region]"
+                      name="Region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Departamento]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Departamento]"
+                      name="Departamento">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Departamento]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Unidades]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Unidades]"
+                      name="Unidades">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[Unidades]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[PrecioUnitario]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[PrecioUnitario]"
+                      name="PrecioUnitario">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Datos de ventas.Outputs[Salida de Unión de todo 1].Columns[PrecioUnitario]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodigoCliente_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodigoCliente_transformed]"
+                      name="CodigoCliente_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[CodigoCliente_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreCliente_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreCliente_transformed]"
+                      name="NombreCliente_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreCliente_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[TipoCliente_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[TipoCliente_transformed]"
+                      name="TipoCliente_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[TipoCliente_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionCliente_transformed]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionCliente_transformed]"
+                      name="DireccionCliente_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[DireccionCliente_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NumeroCliente_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NumeroCliente_transformed]"
+                      name="NumeroCliente_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NumeroCliente_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodVendedor_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodVendedor_sort]"
+                      name="CodVendedor_sort"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[CodVendedor_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreVendedor_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreVendedor_sort]"
+                      name="NombreVendedor_sort"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreVendedor_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Vacacionista_sort]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Vacacionista_sort]"
+                      name="Vacacionista_sort"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Vacacionista_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodProducto_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[CodProducto_transformed]"
+                      name="CodProducto_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[CodProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreProducto_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreProducto_transformed]"
+                      name="NombreProducto_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[MarcaProducto_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[MarcaProducto_transformed]"
+                      name="MarcaProducto_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[MarcaProducto_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Categoria_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Categoria_transformed]"
+                      name="Categoria_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Categoria_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[SodSuSursal_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[SodSuSursal_transformed]"
+                      name="SodSuSursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[SodSuSursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreSucursal_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[NombreSucursal_transformed]"
+                      name="NombreSucursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[NombreSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]"
+                      dataType="wstr"
+                      length="200"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[DireccionSucursal_transformed]"
+                      name="DireccionSucursal_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[DireccionSucursal_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Region_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Region_transformed]"
+                      name="Region_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Region_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación].Columns[Departamento_transformed]"
+                      name="Departamento_transformed">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Especifica el identificador de linaje de la columna de entrada que está asociada a esta columna de salida."
+                          name="SortColumnId">#{Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Outputs[Salida de columna derivada].Columns[Departamento_transformed]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Cargar datos en dimensiones\SQL_SERVER - sgfood01 - compra"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
@@ -9160,11 +10477,6 @@
           </components>
           <paths>
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de columna derivada]"
-              endId="Package\Cargar datos en dimensiones\Insertar datos dim_tiempo.Inputs[Entrada de destino de ADO NET]"
-              name="Salida de columna derivada"
-              startId="Package\Cargar datos en dimensiones\Campos ano, mes, dia.Outputs[Salida de columna derivada]" />
-            <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de columna derivada2]"
               endId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Inputs[Entrada de Multidifusión 1]"
               name="Salida de columna derivada"
@@ -9175,15 +10487,15 @@
               name="Salida de columna derivada"
               startId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios compras.Outputs[Salida de columna derivada]" />
             <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de columna derivada]"
+              endId="Package\Cargar datos en dimensiones\Insertar datos dim_tiempo.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de columna derivada"
+              startId="Package\Cargar datos en dimensiones\Campos ano, mes, dia.Outputs[Salida de columna derivada]" />
+            <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de conversión de datos]"
               endId="Package\Cargar datos en dimensiones\Ordenar fechas y eliminar repetidas.Inputs[Entrada de ordenación]"
               name="Salida de conversión de datos"
               startId="Package\Cargar datos en dimensiones\Conversión de datos.Outputs[Salida de conversión de datos]" />
-            <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 1]"
-              endId="Package\Cargar datos en dimensiones\Extraer fechas.Inputs[Entrada de Unión de todo 2]"
-              name="Salida de multidifusión 1"
-              startId="Package\Cargar datos en dimensiones\Distribuir datos compras.Outputs[Salida de multidifusión 1]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de Multidifusión 1]"
               endId="Package\Cargar datos en dimensiones\Extraer fechas.Inputs[Entrada de Unión de todo 1]"
@@ -9195,20 +10507,35 @@
               name="Salida de multidifusión 1"
               startId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Outputs[Salida de multidifusión 1]" />
             <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 1]"
+              endId="Package\Cargar datos en dimensiones\Extraer fechas.Inputs[Entrada de Unión de todo 2]"
+              name="Salida de multidifusión 1"
+              startId="Package\Cargar datos en dimensiones\Distribuir datos compras.Outputs[Salida de multidifusión 1]" />
+            <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 2]"
               endId="Package\Cargar datos en dimensiones\Ordenar proveedores.Inputs[Entrada de ordenación]"
               name="Salida de multidifusión 2"
               startId="Package\Cargar datos en dimensiones\Distribuir datos compras.Outputs[Salida de multidifusión 2]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 21]"
+              endId="Package\Cargar datos en dimensiones\Ordenar vendedores.Inputs[Entrada de ordenación]"
+              name="Salida de multidifusión 2"
+              startId="Package\Cargar datos en dimensiones\Distribuir datos ventas.Outputs[Salida de multidifusión 2]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación2]"
+              endId="Package\Cargar datos en dimensiones\Insertar dim_cliente.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de ordenación"
+              startId="Package\Cargar datos en dimensiones\Ordenar clientes.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación1]"
               endId="Package\Cargar datos en dimensiones\Insertar dim_proveedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de ordenación"
               startId="Package\Cargar datos en dimensiones\Ordenar proveedores.Outputs[Salida de ordenación]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación2]"
-              endId="Package\Cargar datos en dimensiones\Insertar dim_cliente.Inputs[Entrada de destino de ADO NET]"
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación3]"
+              endId="Package\Cargar datos en dimensiones\Insert dim_vendedor.Inputs[Entrada de destino de ADO NET]"
               name="Salida de ordenación"
-              startId="Package\Cargar datos en dimensiones\Ordenar clientes.Outputs[Salida de ordenación]" />
+              startId="Package\Cargar datos en dimensiones\Ordenar vendedores.Outputs[Salida de ordenación]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de ordenación]"
               endId="Package\Cargar datos en dimensiones\Campos ano, mes, dia.Inputs[Entrada de columna derivada]"
@@ -9245,15 +10572,15 @@
               name="Salida de origen de archivo plano"
               startId="Package\Cargar datos en dimensiones\Archivo - sgfood03 - compra.Outputs[Salida de origen de archivo plano]" />
             <path
-              refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 1]"
-              endId="Package\Cargar datos en dimensiones\Conversión de datos.Inputs[Entrada de conversión de datos]"
-              name="Salida de Unión de todo 1"
-              startId="Package\Cargar datos en dimensiones\Extraer fechas.Outputs[Salida de Unión de todo 1]" />
-            <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 11]"
               endId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios compras.Inputs[Entrada de columna derivada]"
               name="Salida de Unión de todo 1"
               startId="Package\Cargar datos en dimensiones\Datos de compras.Outputs[Salida de Unión de todo 1]" />
+            <path
+              refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 1]"
+              endId="Package\Cargar datos en dimensiones\Conversión de datos.Inputs[Entrada de conversión de datos]"
+              name="Salida de Unión de todo 1"
+              startId="Package\Cargar datos en dimensiones\Extraer fechas.Outputs[Salida de Unión de todo 1]" />
             <path
               refId="Package\Cargar datos en dimensiones.Paths[Salida de Unión de todo 12]"
               endId="Package\Cargar datos en dimensiones\Transformacion de Null y vacios ventas.Inputs[Entrada de columna derivada]"
@@ -12159,6 +13486,58 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Cargar datos en dimensiones\Ordenar vendedores"
+          TopLeft="1677.27274561857,556.352945378608" />
+        <EdgeLayout
+          Id="Package\Cargar datos en dimensiones.Paths[Salida de multidifusión 21]"
+          TopLeft="1408.02599487101,579.17433646467">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="269.24675074756,0"
+              Start="0,0"
+              End="261.74675074756,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="261.74675074756,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Cargar datos en dimensiones\Insert dim_vendedor"
+          TopLeft="1672.51949644354,458.331553629563" />
+        <EdgeLayout
+          Id="Package\Cargar datos en dimensiones.Paths[Salida de ordenación3]"
+          TopLeft="1762.49612103106,556.352945378608">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-56.4213917490447"
+              Start="0,0"
+              End="0,-48.9213917490447">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-48.9213917490447" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -12212,6 +13591,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</BinaryItem>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Cargar datos en dimensiones\Insertar dim_cliente">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar datos en dimensiones\Insert dim_vendedor">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

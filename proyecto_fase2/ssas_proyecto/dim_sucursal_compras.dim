@@ -1,6 +1,6 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3c5ceee7-9ed1-49cf-ab04-47cbc50ce152" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Dim Sucursal</ID>
-  <Name>Dim Sucursal</Name>
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fd5ea527-fcef-4f36-851c-d2829d5ba419" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>dim_sucursal_compras</ID>
+  <Name>dim_sucursal_compras</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -42,39 +42,39 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="3476fa58-cae0-44f6-937c-fff55406750b">
-    <DataSourceViewID>Vista_DW</DataSourceViewID>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="ab5b5c37-80a6-464f-8aba-165709e829c2">
+    <DataSourceViewID>DataMart_Compras</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="81a26e81-e43f-4105-b362-9753b4ea3906">
+  <ErrorConfiguration dwd:design-time-name="8c182f18-3d9a-4df0-a3cc-2051ffea5a57">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="6863cc4e-bce4-447a-9413-2686a15cf71c">
+    <Attribute dwd:design-time-name="b10047c4-3fcb-4f08-81cc-4a54b536a9ed">
       <ID>Id Sucursal</ID>
       <Name>Id Sucursal</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c13bab10-1cc2-495e-b5c7-274ed68d943d">
+        <KeyColumn dwd:design-time-name="5e624cdd-6ac2-4db2-9d9f-921ffa83286d">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="9356f150-1b8f-4fe3-b86d-730673269d1b">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5a685cf-b1c5-4608-8f12-c040e08f965a">
             <TableID>dbo_dim_sucursal</TableID>
             <ColumnID>id_sucursal</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="13c6b211-39f8-440b-a353-c7ea42936509">
+        <AttributeRelationship dwd:design-time-name="698774d8-6698-4b16-945c-4116cd793180">
           <AttributeID>Sod Su Sucursal</AttributeID>
           <Name>Sod Su Sucursal</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="72360f59-88cc-482c-a7c3-3d95675b8b33">
+        <AttributeRelationship dwd:design-time-name="28b5d496-0657-4e09-bf71-b0ce3e37e5b5">
           <AttributeID>Nombre Sucursal</AttributeID>
           <Name>Nombre Sucursal</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="4b8c5fb9-0c47-4e93-93d6-114d165b9ec1">
+        <AttributeRelationship dwd:design-time-name="26459adf-fb42-4a5a-aaa4-63dbeb4dfc93">
           <AttributeID>Direccion Sucursal</AttributeID>
           <Name>Direccion Sucursal</Name>
         </AttributeRelationship>
@@ -83,14 +83,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="f58d5e17-e254-4947-851e-6472c27eb6d5">
+    <Attribute dwd:design-time-name="8bfa04e6-1650-44a5-889e-5e48cee16370">
       <ID>Sod Su Sucursal</ID>
       <Name>Sod Su Sucursal</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="f9ac56a5-9116-4e2a-a70d-92c8ec8fcf5c">
+        <KeyColumn dwd:design-time-name="6161e22e-c380-4013-93fc-3ae60131d60d">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f5f8698f-50ed-4c6b-a224-51d6f33c5c14">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9a4e7711-9d8a-4c3d-9dc9-2f59a1a2a574">
             <TableID>dbo_dim_sucursal</TableID>
             <ColumnID>sod_su_sucursal</ColumnID>
           </Source>
@@ -100,14 +100,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="f01e89f5-8bbf-4835-9b95-7b631174ea2a">
+    <Attribute dwd:design-time-name="e98adaad-7b69-4348-b0b9-1fc2e5714735">
       <ID>Nombre Sucursal</ID>
       <Name>Nombre Sucursal</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="9490ab8a-b370-4083-ba9a-00e252e6782a">
+        <KeyColumn dwd:design-time-name="ad810b98-ff48-4992-a3d8-53e5353b3bba">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="db2645f7-011b-4dcb-bfca-8ac94c259cff">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2e5a65e5-5b71-4086-b2f6-77b736224946">
             <TableID>dbo_dim_sucursal</TableID>
             <ColumnID>nombre_sucursal</ColumnID>
           </Source>
@@ -117,14 +117,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2cb3f94f-28d8-49b8-bea3-dd2d4428df32">
+    <Attribute dwd:design-time-name="b62977bf-3f1a-4cfd-8162-7b88515ba8f1">
       <ID>Direccion Sucursal</ID>
       <Name>Direccion Sucursal</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="05acf94a-92b5-4028-858e-56c116ef54f5">
+        <KeyColumn dwd:design-time-name="41e4a44c-742c-4eb7-a992-74fb77af1928">
           <DataType>WChar</DataType>
           <DataSize>200</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7556ea92-c6a4-41d3-ba19-da7486201218">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="289dd7ae-680a-4c64-a8a6-dbb093b37975">
             <TableID>dbo_dim_sucursal</TableID>
             <ColumnID>direccion_sucursal</ColumnID>
           </Source>

@@ -8,16 +8,6 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Compras.cube</Name>
-      <FullPath>Compras.cube</FullPath>
-      <Dependencies>
-        <ProjectItem>
-          <Name>Compras.partitions</Name>
-          <FullPath>Compras.partitions</FullPath>
-        </ProjectItem>
-      </Dependencies>
-    </ProjectItem>
-    <ProjectItem>
       <Name>Ventas.cube</Name>
       <FullPath>Ventas.cube</FullPath>
       <Dependencies>
@@ -27,39 +17,69 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Compras.cube</Name>
+      <FullPath>Compras.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Compras.partitions</Name>
+          <FullPath>Compras.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Tiempo.dim</Name>
-      <FullPath>Dim Tiempo.dim</FullPath>
+      <Name>dim_departamento_ventas.dim</Name>
+      <FullPath>dim_departamento_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Proveedor.dim</Name>
-      <FullPath>Dim Proveedor.dim</FullPath>
+      <Name>dim_vendedor_ventas.dim</Name>
+      <FullPath>dim_vendedor_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Producto.dim</Name>
-      <FullPath>Dim Producto.dim</FullPath>
+      <Name>dim_sucursal_ventas.dim</Name>
+      <FullPath>dim_sucursal_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Sucursal.dim</Name>
-      <FullPath>Dim Sucursal.dim</FullPath>
+      <Name>dim_cliente_ventas.dim</Name>
+      <FullPath>dim_cliente_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Region.dim</Name>
-      <FullPath>Dim Region.dim</FullPath>
+      <Name>dim_producto_ventas.dim</Name>
+      <FullPath>dim_producto_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Departamento.dim</Name>
-      <FullPath>Dim Departamento.dim</FullPath>
+      <Name>dim_tiempo_ventas.dim</Name>
+      <FullPath>dim_tiempo_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Cliente.dim</Name>
-      <FullPath>Dim Cliente.dim</FullPath>
+      <Name>dim_region_ventas.dim</Name>
+      <FullPath>dim_region_ventas.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Vendedor.dim</Name>
-      <FullPath>Dim Vendedor.dim</FullPath>
+      <Name>dim_departamento_compras.dim</Name>
+      <FullPath>dim_departamento_compras.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dim_sucursal_compras.dim</Name>
+      <FullPath>dim_sucursal_compras.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dim_producto_compras.dim</Name>
+      <FullPath>dim_producto_compras.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dim_proveedor_compras.dim</Name>
+      <FullPath>dim_proveedor_compras.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dim_tiempo_compras.dim</Name>
+      <FullPath>dim_tiempo_compras.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>dim_region_compras.dim</Name>
+      <FullPath>dim_region_compras.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>
@@ -70,8 +90,12 @@
   </DataSources>
   <DataSourceViews>
     <ProjectItem>
-      <Name>Vista_DW.dsv</Name>
-      <FullPath>Vista_DW.dsv</FullPath>
+      <Name>DataMart_Ventas.dsv</Name>
+      <FullPath>DataMart_Ventas.dsv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DataMart_Compras.dsv</Name>
+      <FullPath>DataMart_Compras.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
   <Configurations>

@@ -1,6 +1,6 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a47b7e24-69e6-49d5-87e8-d99f3273c0b3" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
-  <ID>Dim Vendedor</ID>
-  <Name>Dim Vendedor</Name>
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1d07c7a9-90f1-4e9f-988b-7ac678efe2d9" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>dim_vendedor_ventas</ID>
+  <Name>dim_vendedor_ventas</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
   <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
   <Annotations>
@@ -42,39 +42,39 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="21fcc988-c2be-4a75-b575-6f15c8d455f2">
-    <DataSourceViewID>Vista_DW</DataSourceViewID>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="df4cc308-743b-4b07-9081-1cdfc148ef9f">
+    <DataSourceViewID>DataMart_Ventas</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="29813a86-ff5d-47cf-89e4-8a06b02ae7fa">
+  <ErrorConfiguration dwd:design-time-name="8c3ffa7c-6061-45d1-809a-7187fbbfa060">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="ba8f59f9-e6a0-463f-8d1c-3f4953b3d9ea">
+    <Attribute dwd:design-time-name="09ab93bb-cfe7-4169-a011-a1b911d4fe64">
       <ID>Id Vendedor</ID>
       <Name>Id Vendedor</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="b9f630be-383c-4593-88c0-2a6b32aaf63e">
+        <KeyColumn dwd:design-time-name="c0c39df9-61e0-4bd1-914f-e35addc15d3a">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="63c7d3f3-2599-424d-b4e7-1e49c0ea41c1">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b060af14-4ba8-4b34-98a9-8673c674beca">
             <TableID>dbo_dim_vendedor</TableID>
             <ColumnID>id_vendedor</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="6077b7d0-57f2-4e3e-aa2c-f991de10a245">
+        <AttributeRelationship dwd:design-time-name="644999b2-7a9c-4140-94d2-e8b27928fb8f">
           <AttributeID>Codigo Vendedor</AttributeID>
           <Name>Codigo Vendedor</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="c401d088-334d-48ea-a477-01a79d0ad1d6">
+        <AttributeRelationship dwd:design-time-name="67e33335-0c6b-4fc6-99a8-4511de804b71">
           <AttributeID>Nombre Vendedor</AttributeID>
           <Name>Nombre Vendedor</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="a1572fb9-4e92-43d0-8f7d-ee8d06c56d65">
+        <AttributeRelationship dwd:design-time-name="34c7b9c3-cfa5-4e69-abd2-9f706e667bcb">
           <AttributeID>Vacacionista</AttributeID>
           <Name>Vacacionista</Name>
         </AttributeRelationship>
@@ -83,14 +83,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="18e7c572-ab65-484a-a72f-e39b8826f486">
+    <Attribute dwd:design-time-name="498ce413-a70f-4d86-9169-90caa405cd99">
       <ID>Codigo Vendedor</ID>
       <Name>Codigo Vendedor</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="5a5c967a-3bfb-4cb9-a622-39d7f5b09c33">
+        <KeyColumn dwd:design-time-name="dee86576-bf55-478e-bd80-c1cbf2eac688">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b6007e1e-8b9c-492c-9b54-d41f3ef8e6be">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2980f3e6-c9b9-46c7-90ef-bc4b2ed7498d">
             <TableID>dbo_dim_vendedor</TableID>
             <ColumnID>codigo_vendedor</ColumnID>
           </Source>
@@ -100,14 +100,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="8077b538-815a-4b72-b6e9-5881f08d85bc">
+    <Attribute dwd:design-time-name="12418397-50ee-43d4-a362-98900a3b39f7">
       <ID>Nombre Vendedor</ID>
       <Name>Nombre Vendedor</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="66a6ebc5-b44e-478f-b160-2a7ef4c7142f">
+        <KeyColumn dwd:design-time-name="2477fb0f-3a5f-4efc-9ff5-0190dae1b60f">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="06d58efc-caf0-473d-8f5e-1648a6634b3d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7c58b111-967b-46b2-9d37-ad76fab08650">
             <TableID>dbo_dim_vendedor</TableID>
             <ColumnID>nombre_vendedor</ColumnID>
           </Source>
@@ -117,13 +117,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2fd2d570-a16e-433e-8f12-a1f7d2ddd4dc">
+    <Attribute dwd:design-time-name="8bcd94e9-136d-44c0-ae6b-2057011fc70a">
       <ID>Vacacionista</ID>
       <Name>Vacacionista</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="45409a46-05ca-44ca-a51e-fe9b6075220f">
+        <KeyColumn dwd:design-time-name="d276a6b2-25c7-4944-a9e6-6c8494ec67a8">
           <DataType>Boolean</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="868ead5f-6d96-40c3-9eb3-fef82bf87803">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="88350d6b-2546-426b-9841-36ab8d3de4ed">
             <TableID>dbo_dim_vendedor</TableID>
             <ColumnID>vacacionista</ColumnID>
           </Source>

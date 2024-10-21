@@ -8,12 +8,22 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>Cubo.cube</Name>
-      <FullPath>Cubo.cube</FullPath>
+      <Name>Compras.cube</Name>
+      <FullPath>Compras.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>Cubo.partitions</Name>
-          <FullPath>Cubo.partitions</FullPath>
+          <Name>Compras.partitions</Name>
+          <FullPath>Compras.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Ventas.cube</Name>
+      <FullPath>Ventas.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Ventas.partitions</Name>
+          <FullPath>Ventas.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>

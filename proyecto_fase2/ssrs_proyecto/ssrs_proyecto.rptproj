@@ -52,5 +52,8 @@
   <ItemGroup>
     <DataSource Include="ssas_proyecto_ds.rds" />
   </ItemGroup>
+  <ItemGroup>
+    <Report Include="compras_reporte1.rdl" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Reporting Services\Microsoft.ReportingServices.MSBuilder.targets" />
 </Project>

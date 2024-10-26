@@ -9,6 +9,7 @@ CREATE TABLE [dbo].[dim_tiempo](
 	[id_tiempo] [int] IDENTITY(1,1) NOT NULL UNIQUE,
 	[fecha] [date] NOT NULL,
 	[ano] [smallint] NOT NULL,
+	[semestre] [smallint] NOT NULL,
 	[mes] [smallint] NOT NULL,
 	[dia] [smallint] NOT NULL
  CONSTRAINT [PK_dim_tiempo] PRIMARY KEY CLUSTERED 

@@ -11,3 +11,7 @@ Se realiza un análisis de datos a través de Python utilizando las librerías P
 ## Proyecto fase 1
 
 Se realiza un proceso ETL con la herramienta de SQL Server Integration Services (SSIS). Más detalles en la [documentación](proyecto_fase1/README.md) del proyecto.
+
+## Proyecto fase 2
+
+Se continua con el proyecto en su fase 2, ahora se realiza el análisis de datos y reportería utilizando SQL Server Analysis Services (SSAS), SQL Server Reporting Services (SSRS) y Power BI. Más detalles en la [documentación](proyecto_fase2/README.md) del proyecto.

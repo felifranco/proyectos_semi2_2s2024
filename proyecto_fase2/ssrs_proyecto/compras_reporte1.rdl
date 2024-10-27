@@ -10,7 +10,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="ds_compras_reporte1">
       <Query>
         <DataSourceName>ssas_proyecto_ds</DataSourceName>
         <CommandText>WITH MEMBER [Measures].[subtotal] AS [Measures].[Unidades] * [Measures].[Costo Unitario] SELECT NON EMPTY { [Measures].[subtotal] } ON COLUMNS, NON EMPTY { ([dim_tiempo_compras].[Ano].[Ano].ALLMEMBERS * [dim_tiempo_compras].[Semestre].[Semestre].ALLMEMBERS * [dim_tiempo_compras].[Mes].[Mes].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_VALUE, MEMBER_UNIQUE_NAME ON ROWS FROM [Compras] CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS</CommandText>
@@ -895,7 +895,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DataSet1</DataSetName>
+            <DataSetName>ds_compras_reporte1</DataSetName>
             <Top>0.89167in</Top>
             <Left>0.635cm</Left>
             <Height>0.85in</Height>
@@ -912,12 +912,12 @@
                       <GroupExpression>=Fields!Mes.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
-                  <Label>=StrConv(MonthName(Fields!Mes.Value), 3)</Label>
                   <SortExpressions>
                     <SortExpression>
                       <Value>=Fields!Mes.Value</Value>
                     </SortExpression>
                   </SortExpressions>
+                  <Label>=StrConv(MonthName(Fields!Mes.Value), 3)</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
@@ -1236,7 +1236,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DataSet1</DataSetName>
+            <DataSetName>ds_compras_reporte1</DataSetName>
             <Top>0.89167in</Top>
             <Left>5.44167in</Left>
             <Height>4.41667in</Height>
